@@ -1,23 +1,41 @@
+@font-face {
+    font-family: 'Ubuntu Regular'; /*a name to be used later*/
+    src: url('../fonts/Ubuntu-Regular.ttf'); /*URL to font*/
+}
+
 body {
-    width: 30rem;
+    width: 300px;
+    border-radius: 20px;
+    font-family: 'Ubuntu Regular';
 }
 
-ul {
-    list-style-type: none;
-    padding-inline-start: 0;
-    margin: 1rem 0;
+h1 {
+    margin-left: 8px;
+    font-family: 'Ubuntu Regular';
 }
 
-li {
-    padding: 0.25rem;
+#saveButton {
+    transition: all 0.3s;
+    font-size: 18px;
+
+    display: inline-block;
+
+    background-color: rgb(238, 248, 201);
+
+    /* width: 100px;
+    height: 30px; */
+
+    padding: 3px 10px;
+    margin: 5px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
 }
 
-li:nth-child(odd) {
-    background: #80808030;
-}
+#saveButton:hover {
 
-li:nth-child(even) {
-    background: #ffffff;
+    background-color: rgb(180, 189, 147);
 }
 
 h3,
