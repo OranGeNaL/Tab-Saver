@@ -1,39 +1,31 @@
 const saveButton = document.querySelector("#saveButton");
-const openButton = document.querySelector("#openButton");
-const windowFileInput = document.querySelector("#windowFileInput")
-
+const windowFileInput = document.querySelector("#windowFileInput");
 
 saveButton.addEventListener("click", async () => {
     saveWindow();
 });
 
-// openButton.addEventListener("click", async () => {
-//     createWindow();
-// });
-
 windowFileInput.addEventListener("change", async () => {
     createWindow();
 });
 
-
 async function saveWindow() {
-    var tabs = await getWindowTabs()
-    var urls = []
+    var tabs = await getWindowTabs();
+    var urls = [];
 
     tabs.forEach(tab => {
-        urls.push(tab.url)
+        urls.push(tab.url);
     });
 
-    let jsonData = JSON.stringify(urls)
+    let jsonData = JSON.stringify(urls);
 
-    let fileName = document.querySelector("#saveFileName").value
+    let fileName = document.querySelector("#saveFileName").value;
 
     download(jsonData, fileName + '.json', 'text/plain');
 }
 
 async function createWindow() {
-    var urls = await openFileFromPC()
-    // alert(urls)
+    var urls = await openFileFromPC();
 }
 
 async function getWindowTabs() {
@@ -56,7 +48,7 @@ async function openFileFromPC() {
     const reader = new FileReader();
 
     reader.addEventListener("load", () => {
-        createTabs(JSON.parse(reader.result))
+        createTabs(JSON.parse(reader.result));
     }, false);
 
     if (file) {

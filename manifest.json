@@ -2,10 +2,10 @@
   "manifest_version": 3,
   "name": "Tab Saver",
   "description": "Расширение позволяет сохранять открытые вкладки в файл.",
-  "version": "0.1",
+  "version": "1.0",
   "action": {
     "default_popup": "popup/popup.html",
-    "default_icon": "images/main-icon.png"
+    "default_icon": "images/icon.png"
   },
   "permissions": [
     "tabs"
