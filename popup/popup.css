@@ -1,6 +1,8 @@
 @font-face {
-    font-family: 'Ubuntu Regular'; /*a name to be used later*/
-    src: url('../fonts/Ubuntu-Regular.ttf'); /*URL to font*/
+    font-family: 'Ubuntu Regular';
+    /*a name to be used later*/
+    src: url('../fonts/Ubuntu-Regular.ttf');
+    /*URL to font*/
 }
 
 body {
@@ -22,9 +24,6 @@ h1 {
 
     background-color: rgb(238, 248, 201);
 
-    /* width: 100px;
-    height: 30px; */
-
     padding: 3px 10px;
     margin: 5px;
 
@@ -38,7 +37,38 @@ h1 {
     background-color: rgb(180, 189, 147);
 }
 
-h3,
-p {
-    margin: 0;
+#saveFileName {
+    width: 100px;
+
+    border: 3px solid;
+    border-color: rgb(238, 248, 201);
+
+    border-radius: 5px;
+
+    font-family: 'Ubuntu Regular';
+    font-size: 18px;
+    color: black;
+}
+
+.file-input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.file-label {
+    display: inline-block;
+    margin: 5px;
+    padding: 3px 10px;
+    background-color: rgb(238, 248, 201);
+    border-radius: 5px;
+    cursor: pointer;
+
+    
+    font-family: 'Ubuntu Regular';
+    font-size: 18px;
+    color: black;
 }

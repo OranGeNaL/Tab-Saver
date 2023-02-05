@@ -7,7 +7,11 @@ saveButton.addEventListener("click", async () => {
     saveWindow();
 });
 
-openButton.addEventListener("click", async () => {
+// openButton.addEventListener("click", async () => {
+//     createWindow();
+// });
+
+windowFileInput.addEventListener("change", async () => {
     createWindow();
 });
 
@@ -42,22 +46,22 @@ async function getWindowTabs() {
 async function createTabs(urls) {
     urls.forEach(tab => {
         chrome.tabs.create(
-            { url: tab}
+            { url: tab }
         )
     });
 }
 
 async function openFileFromPC() {
-  const [file] = windowFileInput.files;
-  const reader = new FileReader();
+    const [file] = windowFileInput.files;
+    const reader = new FileReader();
 
-  reader.addEventListener("load", () => {
-    createTabs(JSON.parse(reader.result))
-  }, false);
+    reader.addEventListener("load", () => {
+        createTabs(JSON.parse(reader.result))
+    }, false);
 
-  if (file) {
-    reader.readAsText(file);
-  }
+    if (file) {
+        reader.readAsText(file);
+    }
 }
 
 function download(content, fileName, contentType) {

@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./popup.css" />
-  </head>
-  <body>
 
-    <h1>Tab Saver</h1>
-    <form>
-      <p id="saveButton">Сохранить</p>
-      <input placeholder="window" type="text" name="name" id="saveFileName">
-    </form>
-    
-    <form>
-      <button id="openButton">Открыть</button>
-      <input type="file" name="windowFile" id="windowFileInput">
-    </form>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./popup.css" />
+</head>
 
-    <script src="./popup.js" type="module"></script>
-  </body>
+<body>
+
+  <h1>Tab Saver</h1>
+
+  <div>
+    <p id="saveButton">Сохранить</p>
+    <input placeholder="Имя файла" type="text" name="name" id="saveFileName">
+  </div>
+  
+  <div>
+    <label class="file-label">
+      Выберите файл
+      <input class="file-input" type="file" id="windowFileInput" />
+    </label>
+  </div>
+
+  
+  
+  <script src="./popup.js" type="module"></script>
+</body>
+
 </html>
